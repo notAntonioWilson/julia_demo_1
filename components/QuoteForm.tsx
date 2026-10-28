@@ -17,13 +17,15 @@ export default function QuoteForm({
   title = "Get A Free Quote",
   tone = "gold",
 }: {
-  variant?: "wide" | "stacked";
+  variant?: "wide" | "stacked" | "hero";
   promo?: string;
   title?: string;
   tone?: "gold" | "maroon";
 }) {
   const [sent, setSent] = useState(false);
   const wide = variant === "wide";
+  const hero = variant === "hero";
+  const twoCol = variant !== "stacked";
 
   function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -37,7 +39,7 @@ export default function QuoteForm({
   const consentText = tone === "maroon" ? "text-white/90" : "text-ink";
 
   return (
-    <div id="quote" className={`${bg} scroll-mt-40 px-5 py-10 sm:px-10 sm:py-12`}>
+    <div id="quote" className={`${bg} scroll-mt-40 ${hero ? "px-5 py-8 sm:px-8 sm:py-9 [&_.field]:py-3.5" : "px-5 py-10 sm:px-10 sm:py-12"}`}>
       <h2 className={`h-display text-center ${wide ? "text-3xl sm:text-5xl" : "text-3xl sm:text-4xl"}`}>{title}</h2>
       {promo && (
         <p className="mx-auto mt-4 max-w-md bg-red px-4 py-2 text-center text-sm font-bold uppercase tracking-wide text-white">
@@ -58,9 +60,9 @@ export default function QuoteForm({
           </button>
         </div>
       ) : (
-        <form onSubmit={handleSubmit} className="mt-8">
+        <form onSubmit={handleSubmit} className={hero ? "mt-6" : "mt-8"}>
           {promo && <input type="hidden" name="promotion" value={promo} />}
-          <div className={`grid gap-4 ${wide ? "sm:grid-cols-2 sm:gap-5" : ""}`}>
+          <div className={`grid gap-4 ${twoCol ? "sm:grid-cols-2 sm:gap-5" : ""}`}>
             <input className="field" name="firstName" placeholder="First Name *" required autoComplete="given-name" />
             <input className="field" name="lastName" placeholder="Last Name *" required autoComplete="family-name" />
             <input className="field" name="email" type="email" placeholder="Email *" required autoComplete="email" />

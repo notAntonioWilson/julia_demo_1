@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { CircleDollarSign, Phone } from "lucide-react";
+import { CircleCheck, CircleDollarSign, Phone } from "lucide-react";
+import QuoteForm from "./QuoteForm";
 import { images } from "@/lib/images";
 import { reviewPlatforms, site, whatToExpect } from "@/lib/site";
 import { services } from "@/lib/services";
@@ -8,21 +9,39 @@ import { ArrowCircle, FeatureIcon, Photo, ServiceIcon, Stars } from "./ui";
 export function Hero() {
   return (
     <Photo src={images.hero} className="relative" label="Painter rolling a fresh coat of paint on a wall">
-      <div className="absolute inset-0 bg-gradient-to-b from-maroon/85 via-maroon/75 to-ink/80" />
-      <div className="container-x relative flex min-h-[560px] flex-col items-center justify-center pb-40 pt-20 text-center text-white sm:min-h-[640px] lg:pb-48">
-        <p className="eyebrow text-cream sm:text-2xl">{site.name}</p>
-        <h1 className="h-display mt-5 max-w-5xl text-4xl sm:text-6xl lg:text-7xl">
-          Interior, Exterior &amp; Cabinet Painting for{" "}
-          <span className="bg-gradient-to-r from-gold to-[#fde047] bg-clip-text text-transparent">Metro Detroit</span>
-        </h1>
-        <p className="eyebrow mt-6 text-sm text-white/90 sm:text-xl">Your Trusted Painters for Your Home&apos;s Transformation</p>
-        <div className="mt-10 flex flex-col gap-4 sm:flex-row">
-          <Link href="#quote" className="btn-red px-8 py-4">
-            Get A Free Quote <ArrowCircle />
-          </Link>
-          <a href={site.phoneHref} className="btn-outline-light px-8 py-4">
-            <Phone className="h-5 w-5" /> {site.phone}
-          </a>
+      <div className="absolute inset-0 bg-gradient-to-r from-maroon/95 via-maroon/80 to-ink/70" />
+      <div className="container-x relative grid items-center gap-10 py-14 lg:grid-cols-[minmax(0,1fr)_minmax(0,540px)] lg:gap-14 lg:py-20">
+        <div className="text-white">
+          <p className="eyebrow text-cream sm:text-xl">{site.name}</p>
+          <h1 className="h-display mt-5 text-4xl sm:text-5xl xl:text-6xl">
+            Interior, Exterior &amp; Cabinet Painting for{" "}
+            <span className="bg-gradient-to-r from-gold to-[#fde047] bg-clip-text text-transparent">Metro Detroit</span>
+          </h1>
+          <p className="eyebrow mt-6 text-sm text-white/90 sm:text-lg">Your Trusted Painters for Your Home&apos;s Transformation</p>
+          <div className="mt-8 flex items-center gap-3">
+            <Stars className="h-6 w-6" />
+            <span className="font-semibold">
+              {site.rating.value} from {site.rating.count}+ Google reviews
+            </span>
+          </div>
+          <ul className="mt-6 grid gap-3 text-base font-semibold sm:grid-cols-2 sm:text-lg">
+            {["Free in-home estimates", "Licensed & insured painters", "Written workmanship warranty", "Financing available"].map((t) => (
+              <li key={t} className="flex items-center gap-2">
+                <CircleCheck className="h-5 w-5 shrink-0 text-gold" /> {t}
+              </li>
+            ))}
+          </ul>
+          <div className="mt-10 flex flex-col gap-4 sm:flex-row">
+            <a href={site.phoneHref} className="btn-red px-8 py-4">
+              <Phone className="h-5 w-5" /> Call {site.phone}
+            </a>
+            <Link href="#quote" className="btn-outline-light px-8 py-4 lg:hidden">
+              Get A Free Quote <ArrowCircle />
+            </Link>
+          </div>
+        </div>
+        <div className="shadow-2xl">
+          <QuoteForm variant="hero" />
         </div>
       </div>
     </Photo>
