@@ -8,16 +8,16 @@ import { ArrowCircle, FeatureIcon, Photo, ServiceIcon, Stars } from "./ui";
 export function Hero() {
   return (
     <Photo src={images.hero} className="relative" label="Painter rolling a fresh coat of paint on a wall">
-      <div className="absolute inset-0 bg-gradient-to-b from-plum/85 via-plum/75 to-ink/80" />
+      <div className="absolute inset-0 bg-gradient-to-b from-maroon/85 via-maroon/75 to-ink/80" />
       <div className="container-x relative flex min-h-[560px] flex-col items-center justify-center pb-40 pt-20 text-center text-white sm:min-h-[640px] lg:pb-48">
-        <p className="eyebrow text-pink-light sm:text-2xl">{site.name}</p>
+        <p className="eyebrow text-cream sm:text-2xl">{site.name}</p>
         <h1 className="h-display mt-5 max-w-5xl text-4xl sm:text-6xl lg:text-7xl">
           Interior, Exterior &amp; Cabinet Painting for{" "}
-          <span className="bg-gradient-to-r from-pink to-[#f9a8d4] bg-clip-text text-transparent">Metro Detroit</span>
+          <span className="bg-gradient-to-r from-gold to-[#fde047] bg-clip-text text-transparent">Metro Detroit</span>
         </h1>
         <p className="eyebrow mt-6 text-sm text-white/90 sm:text-xl">Your Trusted Painters for Your Home&apos;s Transformation</p>
         <div className="mt-10 flex flex-col gap-4 sm:flex-row">
-          <Link href="#quote" className="btn-pink px-8 py-4">
+          <Link href="#quote" className="btn-red px-8 py-4">
             Get A Free Quote <ArrowCircle />
           </Link>
           <a href={site.phoneHref} className="btn-outline-light px-8 py-4">
@@ -40,14 +40,14 @@ export function ServiceArches({ activeSlug }: { activeSlug?: string }) {
               <Link
                 key={s.slug}
                 href={`/services/${s.slug}`}
-                className="group rounded-t-full border-[6px] border-pink p-2 pb-0 shadow-lg transition-transform hover:-translate-y-1"
+                className="group rounded-t-full border-[6px] border-red p-2 pb-0 shadow-lg transition-transform hover:-translate-y-1"
               >
                 <div
                   className={`flex aspect-[3/4] flex-col items-center justify-center gap-4 rounded-t-full px-3 text-center transition-colors ${
-                    active ? "bg-plum text-white" : "bg-white text-ink group-hover:bg-plum group-hover:text-white"
+                    active ? "bg-maroon text-white" : "bg-white text-ink group-hover:bg-maroon group-hover:text-white"
                   }`}
                 >
-                  <span className={active ? "text-pink" : "text-mauve group-hover:text-pink"}>
+                  <span className={active ? "text-gold" : "text-crimson group-hover:text-gold"}>
                     <ServiceIcon icon={s.icon} className="h-12 w-12 sm:h-14 sm:w-14" />
                   </span>
                   <span className="font-display text-sm font-extrabold uppercase leading-tight sm:text-base">{s.name}</span>
@@ -63,16 +63,16 @@ export function ServiceArches({ activeSlug }: { activeSlug?: string }) {
 
 export function FinancingBanner() {
   return (
-    <section className="bg-plum py-14 text-white">
+    <section className="bg-maroon py-14 text-white">
       <div className="container-x flex flex-col items-center gap-8 text-center lg:flex-row lg:text-left">
-        <div className="flex h-28 w-28 shrink-0 items-center justify-center rounded-full bg-white/90 text-plum sm:h-36 sm:w-36">
+        <div className="flex h-28 w-28 shrink-0 items-center justify-center rounded-full bg-white/90 text-maroon sm:h-36 sm:w-36">
           <CircleDollarSign className="h-20 w-20 sm:h-24 sm:w-24" strokeWidth={1.6} />
         </div>
         <div className="flex-1 lg:text-center">
           <p className="eyebrow text-white sm:text-2xl">We Offer Financing</p>
           <h2 className="h-display mt-3 text-3xl sm:text-5xl">Find Out Your Options</h2>
         </div>
-        <Link href="/financing" className="btn border-2 border-pink bg-white px-8 py-4 text-pink hover:bg-pink hover:text-white">
+        <Link href="/financing" className="btn border-2 border-red bg-white px-8 py-4 text-red hover:bg-red hover:text-white">
           Financing Options <ArrowCircle />
         </Link>
       </div>
@@ -82,15 +82,15 @@ export function FinancingBanner() {
 
 export function WhatToExpect() {
   return (
-    <section className="map-pattern bg-mauve py-16 sm:py-24">
+    <section className="map-pattern bg-gold py-16 sm:py-24">
       <div className="container-x">
-        <p className="eyebrow text-plum">What to Expect</p>
+        <p className="eyebrow text-maroon">What to Expect</p>
         <h2 className="h-display mt-3 max-w-3xl text-3xl text-ink sm:text-5xl">Expert Painting Services in {site.region}</h2>
         <div className="mt-12 grid items-center gap-12 lg:grid-cols-2">
           <ul className="space-y-6">
             {whatToExpect.map((w) => (
               <li key={w.label} className="flex items-center gap-5">
-                <span className="flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-pink text-white shadow-md sm:h-20 sm:w-20">
+                <span className="flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-red text-white shadow-md sm:h-20 sm:w-20">
                   <FeatureIcon icon={w.icon} className="h-8 w-8 sm:h-9 sm:w-9" />
                 </span>
                 <span className="font-display text-lg font-bold uppercase tracking-[0.15em] text-ink sm:text-2xl">{w.label}</span>
@@ -99,9 +99,9 @@ export function WhatToExpect() {
           </ul>
           <div className="relative">
             <Photo src={images.modernExterior} className="aspect-[4/3] w-full shadow-2xl" label="Freshly painted Detroit home" />
-            <div className="absolute -bottom-6 -left-4 bg-plum px-6 py-4 text-white shadow-xl sm:-left-6">
+            <div className="absolute -bottom-6 -left-4 bg-maroon px-6 py-4 text-white shadow-xl sm:-left-6">
               <p className="font-display text-4xl font-extrabold">{site.yearsInBusiness}+</p>
-              <p className="text-xs font-semibold uppercase tracking-widest text-pink-light">Years in Business</p>
+              <p className="text-xs font-semibold uppercase tracking-widest text-cream">Years in Business</p>
             </div>
           </div>
         </div>
@@ -121,7 +121,7 @@ export function ReviewBadges() {
         <div className="mt-10 grid grid-cols-2 gap-5 lg:grid-cols-4">
           {reviewPlatforms.map((p) => (
             <div key={p.name} className="flex flex-col items-center border border-ink/10 bg-cloud px-4 py-6 text-center">
-              <p className="font-display text-xl font-extrabold uppercase text-purple">{p.name}</p>
+              <p className="font-display text-xl font-extrabold uppercase text-crimson">{p.name}</p>
               <p className="mt-2 flex items-center gap-2 font-display text-3xl font-extrabold text-ink">{p.rating}</p>
               <div className="mt-2">
                 <Stars className="h-5 w-5" />
@@ -139,8 +139,8 @@ export function QualitySection() {
   return (
     <section className="relative">
       <div className="absolute inset-0 grid grid-rows-2">
-        <div className="bg-plum" />
-        <div className="map-pattern bg-pink" />
+        <div className="bg-maroon" />
+        <div className="map-pattern bg-gold" />
       </div>
       <div className="container-x relative py-16 sm:py-24">
         <div className="bg-white px-6 py-12 text-center shadow-2xl sm:px-14 sm:py-16">
@@ -176,9 +176,9 @@ export function QualitySection() {
 export function PageHero({ eyebrow, title, image }: { eyebrow?: string; title: string; image?: string }) {
   return (
     <Photo src={image ?? images.wall} className="relative">
-      <div className="absolute inset-0 bg-gradient-to-r from-plum/90 to-ink/75" />
+      <div className="absolute inset-0 bg-gradient-to-r from-maroon/90 to-ink/75" />
       <div className="container-x relative py-16 text-white sm:py-24">
-        {eyebrow && <p className="eyebrow text-pink-light">{eyebrow}</p>}
+        {eyebrow && <p className="eyebrow text-cream">{eyebrow}</p>}
         <h1 className="h-display mt-3 max-w-4xl text-4xl sm:text-6xl">{title}</h1>
       </div>
     </Photo>
@@ -187,7 +187,7 @@ export function PageHero({ eyebrow, title, image }: { eyebrow?: string; title: s
 
 export function CtaBand() {
   return (
-    <section className="bg-gradient-to-r from-purple to-pink py-14 text-white">
+    <section className="bg-gradient-to-r from-crimson to-red py-14 text-white">
       <div className="container-x flex flex-col items-center justify-between gap-6 text-center lg:flex-row lg:text-left">
         <div>
           <h2 className="h-display text-3xl sm:text-4xl">Ready for a Fresh Coat?</h2>
@@ -197,7 +197,7 @@ export function CtaBand() {
           <a href={site.phoneHref} className="btn-outline-light px-8 py-4">
             <Phone className="h-5 w-5" /> {site.phone}
           </a>
-          <Link href="/contact#quote" className="btn bg-white px-8 py-4 text-plum hover:bg-ink hover:text-white">
+          <Link href="/contact#quote" className="btn bg-white px-8 py-4 text-maroon hover:bg-ink hover:text-white">
             Get A Free Quote <ArrowCircle />
           </Link>
         </div>

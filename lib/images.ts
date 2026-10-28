@@ -2,7 +2,7 @@
 // PLACEHOLDER PHOTOS
 // To use real photos: drop files in /public/images and change the
 // value to a local path, e.g. hero: "/images/hero.jpg"
-// Every photo sits on a pink/purple gradient, so if a URL ever
+// Every photo sits on a red/crimson gradient, so if a URL ever
 // fails the layout still looks finished.
 // =============================================================
 

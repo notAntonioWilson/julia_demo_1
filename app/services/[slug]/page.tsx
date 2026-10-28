@@ -45,9 +45,9 @@ export default async function ServicePage({ params }: Props) {
     <>
       <div className="bg-cloud">
         <div className="container-x flex items-center gap-2 py-3 text-sm text-ink/70">
-          <Link href="/" className="hover:text-purple">Home</Link>
+          <Link href="/" className="hover:text-crimson">Home</Link>
           <ChevronRight className="h-4 w-4" />
-          <Link href="/services" className="hover:text-purple">Services</Link>
+          <Link href="/services" className="hover:text-crimson">Services</Link>
           <ChevronRight className="h-4 w-4" />
           <span className="font-semibold text-ink">{s.name}</span>
         </div>
@@ -56,7 +56,7 @@ export default async function ServicePage({ params }: Props) {
       <div className="container-x grid gap-12 py-12 lg:grid-cols-[minmax(0,1fr)_380px] lg:py-16">
         {/* MAIN CONTENT */}
         <article className="min-w-0">
-          <h1 className="h-display text-4xl text-plum sm:text-6xl">
+          <h1 className="h-display text-4xl text-maroon sm:text-6xl">
             {s.name} in Detroit, MI
           </h1>
           <Photo src={s.image} className="mt-10 aspect-[5/2] w-full" label={s.name} />
@@ -90,18 +90,18 @@ export default async function ServicePage({ params }: Props) {
               "Clear communication from first call to final walkthrough",
             ].map((t) => (
               <li key={t} className="flex items-start gap-3 text-lg text-ink/90">
-                <CircleCheck className="mt-0.5 h-6 w-6 shrink-0 text-pink" /> {t}
+                <CircleCheck className="mt-0.5 h-6 w-6 shrink-0 text-red" /> {t}
               </li>
             ))}
           </ul>
-          <div className="mt-8 flex flex-col items-start gap-4 border-l-8 border-pink bg-pink-light p-6 sm:flex-row sm:items-center sm:justify-between">
+          <div className="mt-8 flex flex-col items-start gap-4 border-l-8 border-red bg-cream p-6 sm:flex-row sm:items-center sm:justify-between">
             <div>
-              <p className="font-display text-xl font-extrabold uppercase text-plum">Call Today!</p>
-              <a href={site.phoneHref} className="font-display text-3xl font-extrabold text-ink hover:text-purple">
+              <p className="font-display text-xl font-extrabold uppercase text-maroon">Call Today!</p>
+              <a href={site.phoneHref} className="font-display text-3xl font-extrabold text-ink hover:text-crimson">
                 {site.phone}
               </a>
             </div>
-            <Link href="/contact#quote" className="btn-pink">
+            <Link href="/contact#quote" className="btn-red">
               Contact Us Today <ArrowCircle />
             </Link>
           </div>
@@ -114,7 +114,7 @@ export default async function ServicePage({ params }: Props) {
           <ul className="mt-6 grid gap-3 sm:grid-cols-2">
             {s.signs.map((t) => (
               <li key={t} className="flex items-center gap-3 bg-cloud px-4 py-3 font-semibold text-ink">
-                <span className="h-2.5 w-2.5 shrink-0 rounded-full bg-pink" /> {t}
+                <span className="h-2.5 w-2.5 shrink-0 rounded-full bg-red" /> {t}
               </li>
             ))}
           </ul>
@@ -133,7 +133,7 @@ export default async function ServicePage({ params }: Props) {
           <ol className="mt-8 space-y-6">
             {process.map((p, n) => (
               <li key={p.title} className="flex gap-5">
-                <span className="flex h-14 w-14 shrink-0 items-center justify-center bg-plum font-display text-2xl font-extrabold text-white">
+                <span className="flex h-14 w-14 shrink-0 items-center justify-center bg-maroon font-display text-2xl font-extrabold text-white">
                   {n + 1}
                 </span>
                 <div>
@@ -147,7 +147,7 @@ export default async function ServicePage({ params }: Props) {
           <h2 className="h-display mt-14 text-3xl text-ink sm:text-4xl">{s.optionsTitle}</h2>
           <ul className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
             {s.options.map((o) => (
-              <li key={o} className="border-2 border-purple/20 px-4 py-3 font-semibold text-purple">
+              <li key={o} className="border-2 border-crimson/20 px-4 py-3 font-semibold text-crimson">
                 {o}
               </li>
             ))}
@@ -157,7 +157,7 @@ export default async function ServicePage({ params }: Props) {
           <p className="mt-6 text-lg leading-relaxed text-ink/85">
             Every {site.name} project is backed by a written workmanship warranty, so you can invest in your property with
             confidence. We also offer{" "}
-            <Link href="/financing" className="font-semibold text-purple underline">
+            <Link href="/financing" className="font-semibold text-crimson underline">
               financing options
             </Link>{" "}
             that break your project into manageable monthly payments.
@@ -167,13 +167,13 @@ export default async function ServicePage({ params }: Props) {
           <p className="mt-6 text-lg leading-relaxed text-ink/85">
             As your local painting experts, {site.name} proudly serves Detroit and the surrounding communities. Because we
             live and work here, we understand Michigan weather, older Detroit homes, and what it takes to make paint last in
-            this climate. <Link href="/service-areas" className="font-semibold text-purple underline">See all service areas</Link>.
+            this climate. <Link href="/service-areas" className="font-semibold text-crimson underline">See all service areas</Link>.
           </p>
 
           <h2 className="h-display mt-14 text-3xl text-ink sm:text-4xl">Get a Free {s.name} Quote</h2>
           <p className="mt-6 text-lg leading-relaxed text-ink/85">
             <strong>Invest in your property today.</strong>{" "}
-            <Link href="/contact#quote" className="font-bold text-purple underline">
+            <Link href="/contact#quote" className="font-bold text-crimson underline">
               Schedule your free in-home estimate
             </Link>{" "}
             with {site.name}.
@@ -185,7 +185,7 @@ export default async function ServicePage({ params }: Props) {
               <details key={f.q} className="group py-5">
                 <summary className="flex cursor-pointer list-none items-center justify-between gap-4 font-display text-lg font-bold text-ink">
                   {f.q}
-                  <span className="text-2xl text-pink transition-transform group-open:rotate-45">+</span>
+                  <span className="text-2xl text-red transition-transform group-open:rotate-45">+</span>
                 </summary>
                 <p className="mt-3 text-lg leading-relaxed text-ink/80">{f.a}</p>
               </details>
@@ -195,14 +195,14 @@ export default async function ServicePage({ params }: Props) {
 
         {/* SIDEBAR */}
         <aside className="space-y-8">
-          <QuoteForm variant="stacked" tone="plum" />
+          <QuoteForm variant="stacked" tone="maroon" />
           <div className="bg-cloud p-6">
             <h3 className="h-display text-center text-2xl text-ink">Deals &amp; Financing</h3>
             <div className="mt-5 space-y-4">
               {offers.slice(0, 2).map((o) => (
                 <div key={o.value} className="coupon-border bg-white p-4 text-center">
-                  <p className="h-display text-2xl text-plum">{o.title}</p>
-                  <p className="mt-1 text-sm font-bold uppercase tracking-wide text-pink">{o.value}</p>
+                  <p className="h-display text-2xl text-maroon">{o.title}</p>
+                  <p className="mt-1 text-sm font-bold uppercase tracking-wide text-red">{o.value}</p>
                   <p className="mt-2 text-xs text-ink/60">Expires {o.expires}. Restrictions apply.</p>
                 </div>
               ))}
@@ -210,7 +210,7 @@ export default async function ServicePage({ params }: Props) {
             <Link href="/specials" className="btn-outline mt-5 w-full">
               See All Offers
             </Link>
-            <a href={site.phoneHref} className="mt-3 flex items-center justify-center gap-2 font-display font-bold text-plum hover:text-pink">
+            <a href={site.phoneHref} className="mt-3 flex items-center justify-center gap-2 font-display font-bold text-maroon hover:text-red">
               <Phone className="h-4 w-4" /> {site.phone}
             </a>
           </div>

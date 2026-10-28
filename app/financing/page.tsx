@@ -29,8 +29,8 @@ export default function FinancingPage() {
           <div className="mt-14 grid gap-8 md:grid-cols-3">
             {steps.map((s, n) => (
               <div key={s.title} className="relative bg-cloud p-8 text-center">
-                <span className="absolute left-4 top-4 font-display text-5xl font-extrabold text-pink/20">0{n + 1}</span>
-                <s.icon className="mx-auto h-14 w-14 text-purple" />
+                <span className="absolute left-4 top-4 font-display text-5xl font-extrabold text-red/20">0{n + 1}</span>
+                <s.icon className="mx-auto h-14 w-14 text-crimson" />
                 <h2 className="mt-5 font-display text-xl font-extrabold uppercase text-ink">{s.title}</h2>
                 <p className="mt-3 text-ink/75">{s.text}</p>
               </div>
@@ -39,7 +39,7 @@ export default function FinancingPage() {
           <ul className="mx-auto mt-14 grid max-w-3xl gap-4 sm:grid-cols-2">
             {["12 months no interest options", "Low monthly payment plans", "Fast approval decisions", "No prepayment penalties"].map((t) => (
               <li key={t} className="flex items-center gap-3 text-lg font-semibold text-ink">
-                <CircleCheck className="h-6 w-6 text-pink" /> {t}
+                <CircleCheck className="h-6 w-6 text-red" /> {t}
               </li>
             ))}
           </ul>

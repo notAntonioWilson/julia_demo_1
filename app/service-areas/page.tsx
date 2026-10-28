@@ -23,19 +23,19 @@ export default function ServiceAreasPage() {
           </p>
           <ul className="mt-12 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
             {serviceAreas.map((a) => (
-              <li key={a} className="flex items-center gap-3 border-l-4 border-pink bg-cloud px-4 py-4 font-display font-bold uppercase text-ink">
-                <MapPin className="h-5 w-5 shrink-0 text-purple" /> {a}, MI
+              <li key={a} className="flex items-center gap-3 border-l-4 border-red bg-cloud px-4 py-4 font-display font-bold uppercase text-ink">
+                <MapPin className="h-5 w-5 shrink-0 text-crimson" /> {a}, MI
               </li>
             ))}
           </ul>
         </div>
       </section>
-      <section className="bg-plum py-16 text-white">
+      <section className="bg-maroon py-16 text-white">
         <div className="container-x">
           <h2 className="h-display text-center text-3xl sm:text-4xl">Services Available in Every Area</h2>
           <div className="mt-10 flex flex-wrap justify-center gap-3">
             {services.map((s) => (
-              <Link key={s.slug} href={`/services/${s.slug}`} className="border-2 border-pink px-5 py-3 font-display font-bold uppercase hover:bg-pink">
+              <Link key={s.slug} href={`/services/${s.slug}`} className="border-2 border-red px-5 py-3 font-display font-bold uppercase hover:bg-red">
                 {s.name}
               </Link>
             ))}

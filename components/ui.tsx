@@ -69,7 +69,7 @@ export function FeatureIcon({ icon, className = "h-9 w-9" }: { icon: string; cla
 
 export function Stars({ className = "h-6 w-6" }: { className?: string }) {
   return (
-    <span className="flex text-pink">
+    <span className="flex text-gold">
       {Array.from({ length: 5 }).map((_, i) => (
         <Star key={i} className={`${className} fill-current`} />
       ))}
@@ -86,7 +86,7 @@ export function ArrowCircle({ className = "h-5 w-5" }: { className?: string }) {
 }
 
 export function SocialIcons({ className = "" }: { className?: string }) {
-  const cls = "flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-white transition-colors hover:bg-pink";
+  const cls = "flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-white transition-colors hover:bg-red";
   return (
     <div className={`flex gap-3 ${className}`}>
       <a href="https://facebook.com" aria-label="Facebook" className={cls} target="_blank" rel="noreferrer">
@@ -123,7 +123,7 @@ export function SectionTitle({
 }) {
   return (
     <div className={center ? "text-center" : ""}>
-      {eyebrow && <p className={`eyebrow ${light ? "text-pink-light" : "text-purple"}`}>{eyebrow}</p>}
+      {eyebrow && <p className={`eyebrow ${light ? "text-cream" : "text-crimson"}`}>{eyebrow}</p>}
       <h2 className={`h-display mt-3 text-3xl sm:text-4xl lg:text-5xl ${light ? "text-white" : "text-ink"}`}>{title}</h2>
     </div>
   );

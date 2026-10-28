@@ -15,12 +15,12 @@ export default function QuoteForm({
   variant = "wide",
   promo,
   title = "Get A Free Quote",
-  tone = "mauve",
+  tone = "gold",
 }: {
   variant?: "wide" | "stacked";
   promo?: string;
   title?: string;
-  tone?: "mauve" | "plum";
+  tone?: "gold" | "maroon";
 }) {
   const [sent, setSent] = useState(false);
   const wide = variant === "wide";
@@ -33,25 +33,25 @@ export default function QuoteForm({
     setSent(true);
   }
 
-  const bg = tone === "plum" ? "bg-plum text-white" : "bg-mauve text-ink";
-  const consentText = tone === "plum" ? "text-white/90" : "text-ink";
+  const bg = tone === "maroon" ? "bg-maroon text-white" : "bg-gold text-ink";
+  const consentText = tone === "maroon" ? "text-white/90" : "text-ink";
 
   return (
     <div id="quote" className={`${bg} scroll-mt-40 px-5 py-10 sm:px-10 sm:py-12`}>
       <h2 className={`h-display text-center ${wide ? "text-3xl sm:text-5xl" : "text-3xl sm:text-4xl"}`}>{title}</h2>
       {promo && (
-        <p className="mx-auto mt-4 max-w-md bg-pink px-4 py-2 text-center text-sm font-bold uppercase tracking-wide text-white">
+        <p className="mx-auto mt-4 max-w-md bg-red px-4 py-2 text-center text-sm font-bold uppercase tracking-wide text-white">
           Promotion applied: {promo}
         </p>
       )}
 
       {sent ? (
         <div className="animate-fade mx-auto mt-8 max-w-lg bg-white p-8 text-center text-ink">
-          <CircleCheck className="mx-auto h-14 w-14 text-pink" />
+          <CircleCheck className="mx-auto h-14 w-14 text-red" />
           <h3 className="h-display mt-4 text-2xl">Thank You!</h3>
           <p className="mt-3 text-ink/80">
             We received your request. A member of our team will reach out shortly to schedule your free estimate. Need us
-            sooner? Call <a className="font-bold text-purple" href={site.phoneHref}>{site.phone}</a>.
+            sooner? Call <a className="font-bold text-crimson" href={site.phoneHref}>{site.phone}</a>.
           </p>
           <button onClick={() => setSent(false)} className="btn-outline mt-6">
             Send Another
@@ -82,12 +82,12 @@ export default function QuoteForm({
           </div>
 
           <label className="mt-6 flex items-center justify-center gap-3 text-base font-semibold sm:text-lg">
-            <input type="checkbox" name="emailOptIn" defaultChecked className="h-5 w-5 accent-purple" />
+            <input type="checkbox" name="emailOptIn" defaultChecked className="h-5 w-5 accent-crimson" />
             Yes! Sign me up for emails!
           </label>
 
           <label className={`mt-6 flex items-start gap-3 text-xs font-semibold leading-relaxed sm:text-sm ${consentText}`}>
-            <input type="checkbox" name="consent" required className="mt-1 h-5 w-5 shrink-0 accent-purple" />
+            <input type="checkbox" name="consent" required className="mt-1 h-5 w-5 shrink-0 accent-crimson" />
             <span>
               By clicking &quot;Submit&quot;, you agree that {site.name} may contact you at the phone number and email
               provided, including by calls and text messages (SMS) using automated technology for marketing and
@@ -97,7 +97,7 @@ export default function QuoteForm({
           </label>
 
           <div className="mt-8 flex justify-center">
-            <button type="submit" className="btn border-2 border-white bg-pink px-14 py-4 text-lg text-white hover:bg-pink-dark">
+            <button type="submit" className="btn border-2 border-white bg-red px-14 py-4 text-lg text-white hover:bg-red-dark">
               Submit <ArrowCircle />
             </button>
           </div>

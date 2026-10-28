@@ -34,7 +34,7 @@ export default function AboutPage() {
       <section className="bg-white py-16 sm:py-24">
         <div className="container-x grid items-center gap-14 lg:grid-cols-2">
           <div>
-            <p className="eyebrow text-purple">Our Story</p>
+            <p className="eyebrow text-crimson">Our Story</p>
             <h2 className="h-display mt-3 text-3xl text-ink sm:text-5xl">Family Owned. Detroit Proud.</h2>
             <div className="mt-6 space-y-5 text-lg leading-relaxed text-ink/85">
               <p>
@@ -47,7 +47,7 @@ export default function AboutPage() {
                 we still treat every home like it is our own.
               </p>
             </div>
-            <Link href="/contact#quote" className="btn-pink mt-8 px-8 py-4">
+            <Link href="/contact#quote" className="btn-red mt-8 px-8 py-4">
               Get A Free Quote <ArrowCircle />
             </Link>
           </div>
@@ -55,11 +55,11 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="bg-plum py-14 text-white">
+      <section className="bg-maroon py-14 text-white">
         <div className="container-x grid grid-cols-2 gap-8 text-center lg:grid-cols-4">
           {stats.map((s) => (
             <div key={s.label}>
-              <p className="font-display text-4xl font-extrabold text-pink sm:text-5xl">{s.value}</p>
+              <p className="font-display text-4xl font-extrabold text-gold sm:text-5xl">{s.value}</p>
               <p className="mt-2 text-sm font-semibold uppercase tracking-widest text-white/80">{s.label}</p>
             </div>
           ))}
@@ -68,12 +68,12 @@ export default function AboutPage() {
 
       <section className="bg-cloud py-16 sm:py-24">
         <div className="container-x">
-          <p className="eyebrow text-center text-purple">Our Values</p>
+          <p className="eyebrow text-center text-crimson">Our Values</p>
           <h2 className="h-display mt-3 text-center text-3xl text-ink sm:text-5xl">What Makes Us Different</h2>
           <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {values.map((v) => (
-              <div key={v.title} className="border-t-4 border-pink bg-white p-8 shadow-md">
-                <v.icon className="h-10 w-10 text-purple" />
+              <div key={v.title} className="border-t-4 border-red bg-white p-8 shadow-md">
+                <v.icon className="h-10 w-10 text-crimson" />
                 <h3 className="mt-5 font-display text-xl font-extrabold uppercase text-ink">{v.title}</h3>
                 <p className="mt-3 text-ink/75">{v.text}</p>
               </div>

@@ -23,10 +23,10 @@ export default function ReviewsSlider() {
           <div className="h-full w-full border-[10px] border-white/95" />
         </Photo>
         <div>
-          <p className="eyebrow text-purple sm:text-2xl">Our Reviews</p>
+          <p className="eyebrow text-crimson sm:text-2xl">Our Reviews</p>
           <h2 className="h-display mt-4 text-3xl text-ink sm:text-5xl">Customer Reviews From {site.region} Homeowners</h2>
           <div className="mt-8 flex items-center gap-4">
-            <span className="font-display text-7xl font-extrabold leading-none text-plum">&ldquo;</span>
+            <span className="font-display text-7xl font-extrabold leading-none text-maroon">&ldquo;</span>
             <Stars className="h-7 w-7" />
           </div>
           <div key={i} className="animate-fade min-h-[200px]">
@@ -41,11 +41,11 @@ export default function ReviewsSlider() {
                 key={n}
                 onClick={() => setI(n)}
                 aria-label={`Show review ${n + 1}`}
-                className={`h-3.5 w-3.5 rounded-full transition-colors ${n === i ? "bg-plum" : "bg-ink/25 hover:bg-ink/50"}`}
+                className={`h-3.5 w-3.5 rounded-full transition-colors ${n === i ? "bg-maroon" : "bg-ink/25 hover:bg-ink/50"}`}
               />
             ))}
           </div>
-          <Link href="/reviews" className="btn-pink mt-10 px-8 py-4">
+          <Link href="/reviews" className="btn-red mt-10 px-8 py-4">
             Read More Reviews <ArrowCircle />
           </Link>
         </div>

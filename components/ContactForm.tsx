@@ -11,7 +11,7 @@ export default function ContactForm() {
   const [files, setFiles] = useState(0);
 
   const line =
-    "w-full border-0 border-b border-ink/30 bg-transparent px-3 py-4 text-lg text-ink placeholder:text-ink/70 outline-none transition-colors focus:border-pink";
+    "w-full border-0 border-b border-ink/30 bg-transparent px-3 py-4 text-lg text-ink placeholder:text-ink/70 outline-none transition-colors focus:border-red";
 
   function submit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -20,12 +20,12 @@ export default function ContactForm() {
 
   if (sent) {
     return (
-      <div className="animate-fade bg-pink-light p-10 text-center">
-        <CircleCheck className="mx-auto h-14 w-14 text-pink" />
+      <div className="animate-fade bg-cream p-10 text-center">
+        <CircleCheck className="mx-auto h-14 w-14 text-red" />
         <h3 className="h-display mt-4 text-2xl">Message Sent!</h3>
         <p className="mt-3 text-ink/80">
           Thanks for reaching out. We will get back to you within one business day. For faster help call{" "}
-          <a href={site.phoneHref} className="font-bold text-purple">{site.phone}</a>.
+          <a href={site.phoneHref} className="font-bold text-crimson">{site.phone}</a>.
         </p>
         <button onClick={() => setSent(false)} className="btn-outline mt-6">
           Send Another
@@ -48,7 +48,7 @@ export default function ContactForm() {
       </select>
       <textarea className={`${line} min-h-40 resize-y`} name="message" placeholder="Tell us about your project." />
       <div className="flex items-center justify-between py-3">
-        <label className="flex cursor-pointer items-center gap-2 text-lg text-purple hover:text-pink">
+        <label className="flex cursor-pointer items-center gap-2 text-lg text-crimson hover:text-red">
           <Paperclip className="h-5 w-5" /> Attach Files
           <input
             type="file"
@@ -62,7 +62,7 @@ export default function ContactForm() {
       </div>
       <button
         type="submit"
-        className="mt-4 w-full rounded-full border-2 border-ink py-5 font-display text-lg font-bold tracking-[0.2em] text-ink transition-colors hover:border-pink hover:bg-pink hover:text-white"
+        className="mt-4 w-full rounded-full border-2 border-ink py-5 font-display text-lg font-bold tracking-[0.2em] text-ink transition-colors hover:border-red hover:bg-red hover:text-white"
       >
         Send
       </button>

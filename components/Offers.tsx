@@ -25,10 +25,10 @@ export function OfferCard({ offer }: { offer: Offer }) {
     <>
       <div className="h-full bg-white p-4 shadow-xl">
         <div className="coupon-border flex h-full flex-col items-center px-5 py-8 text-center">
-          <h3 className="h-display text-4xl text-plum sm:text-5xl">{offer.title}</h3>
-          <p className="mt-4 font-display text-xl font-semibold uppercase tracking-[0.12em] text-pink sm:text-2xl">{offer.value}</p>
+          <h3 className="h-display text-4xl text-maroon sm:text-5xl">{offer.title}</h3>
+          <p className="mt-4 font-display text-xl font-semibold uppercase tracking-[0.12em] text-red sm:text-2xl">{offer.value}</p>
           <p className="mt-3 text-lg text-ink/85">{offer.detail}</p>
-          <button onClick={() => setOpen(true)} className="btn-pink mt-6 px-8 py-4">
+          <button onClick={() => setOpen(true)} className="btn-red mt-6 px-8 py-4">
             Redeem Offer <ArrowCircle />
           </button>
           <p className="mt-6 text-sm text-ink/70">
@@ -51,7 +51,7 @@ export function OfferCard({ offer }: { offer: Offer }) {
             <button
               onClick={() => setOpen(false)}
               aria-label="Close"
-              className="absolute right-3 top-3 z-10 flex h-10 w-10 items-center justify-center bg-white text-ink hover:bg-pink hover:text-white"
+              className="absolute right-3 top-3 z-10 flex h-10 w-10 items-center justify-center bg-white text-ink hover:bg-red hover:text-white"
             >
               <X className="h-5 w-5" />
             </button>
@@ -78,7 +78,7 @@ export function OffersCarousel() {
   return (
     <section className="bg-gradient-to-b from-cloud to-white py-16 sm:py-24">
       <div className="container-x">
-        <p className="eyebrow text-center text-purple">Our Offers</p>
+        <p className="eyebrow text-center text-crimson">Our Offers</p>
         <h2 className="h-display mt-3 text-center text-3xl text-ink sm:text-5xl">Save On Your Service Today</h2>
         <div key={page} className="animate-fade mt-12 grid gap-8 md:grid-cols-2">
           {visible.map((o) => (
@@ -91,7 +91,7 @@ export function OffersCarousel() {
               key={i}
               onClick={() => setPage(i)}
               aria-label={`Show offers page ${i + 1}`}
-              className={`h-3.5 w-3.5 rounded-full transition-colors ${i === page ? "bg-plum" : "bg-ink/25 hover:bg-ink/50"}`}
+              className={`h-3.5 w-3.5 rounded-full transition-colors ${i === page ? "bg-maroon" : "bg-ink/25 hover:bg-ink/50"}`}
             />
           ))}
         </div>

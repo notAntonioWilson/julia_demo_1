@@ -31,29 +31,29 @@ export default function ContactPage() {
               We love our customers, so feel free to call or stop by during normal business hours.
             </p>
 
-            <h3 className="mt-12 font-display text-2xl font-bold tracking-[0.12em] text-plum sm:text-3xl">{site.name}</h3>
-            <a href={site.mapsUrl} target="_blank" rel="noreferrer" className="mt-5 flex items-start gap-3 text-lg text-ink hover:text-purple">
-              <MapPin className="mt-1 h-5 w-5 shrink-0 text-pink" />
+            <h3 className="mt-12 font-display text-2xl font-bold tracking-[0.12em] text-maroon sm:text-3xl">{site.name}</h3>
+            <a href={site.mapsUrl} target="_blank" rel="noreferrer" className="mt-5 flex items-start gap-3 text-lg text-ink hover:text-crimson">
+              <MapPin className="mt-1 h-5 w-5 shrink-0 text-red" />
               {site.address.street}, {site.address.city}, {site.address.state} {site.address.zip}
             </a>
 
             <p className="mt-8 text-lg font-semibold text-ink">{site.owner}, Owner</p>
-            <a href={`mailto:${site.email}`} className="mt-1 flex items-center gap-3 text-lg text-purple hover:text-pink">
-              <Mail className="h-5 w-5 text-pink" /> {site.email}
+            <a href={`mailto:${site.email}`} className="mt-1 flex items-center gap-3 text-lg text-crimson hover:text-red">
+              <Mail className="h-5 w-5 text-red" /> {site.email}
             </a>
 
             <p className="mt-8 text-lg font-semibold text-ink">Office</p>
-            <a href={site.phoneHref} className="mt-1 flex items-center gap-3 text-lg text-purple hover:text-pink">
-              <Phone className="h-5 w-5 text-pink" /> {site.phone}
+            <a href={site.phoneHref} className="mt-1 flex items-center gap-3 text-lg text-crimson hover:text-red">
+              <Phone className="h-5 w-5 text-red" /> {site.phone}
             </a>
 
             <h3 className="mt-12 font-display text-2xl font-bold tracking-[0.12em] text-ink sm:text-3xl">Hours</h3>
             <ul className="mt-5 space-y-2 text-lg">
               {site.hours.map((h) => (
                 <li key={h.days} className="flex items-center gap-3">
-                  <Clock className="h-5 w-5 text-pink" />
+                  <Clock className="h-5 w-5 text-red" />
                   <span className="w-44 text-ink">{h.days}</span>
-                  <span className="text-purple">{h.time}</span>
+                  <span className="text-crimson">{h.time}</span>
                 </li>
               ))}
             </ul>

@@ -12,14 +12,14 @@ export default function Footer() {
       <div className="container-x grid gap-12 py-16 sm:grid-cols-2 lg:grid-cols-4">
         <div>
           <Logo light />
-          <p className="mt-6 text-sm font-semibold uppercase tracking-widest text-pink">Phone:</p>
-          <a href={site.phoneHref} className="mt-1 flex items-center gap-2 font-display text-xl font-bold hover:text-pink">
-            <Phone className="h-5 w-5 text-pink" /> {site.phone}
+          <p className="mt-6 text-sm font-semibold uppercase tracking-widest text-gold">Phone:</p>
+          <a href={site.phoneHref} className="mt-1 flex items-center gap-2 font-display text-xl font-bold hover:text-red">
+            <Phone className="h-5 w-5 text-gold" /> {site.phone}
           </a>
-          <p className="mt-5 text-sm font-semibold uppercase tracking-widest text-pink">License:</p>
+          <p className="mt-5 text-sm font-semibold uppercase tracking-widest text-gold">License:</p>
           <p className="mt-1 text-white/80">{site.license}</p>
-          <p className="mt-5 text-sm font-semibold uppercase tracking-widest text-pink">Email:</p>
-          <a href={`mailto:${site.email}`} className="mt-1 block text-white/80 hover:text-pink">
+          <p className="mt-5 text-sm font-semibold uppercase tracking-widest text-gold">Email:</p>
+          <a href={`mailto:${site.email}`} className="mt-1 block text-white/80 hover:text-red">
             {site.email}
           </a>
         </div>
@@ -29,7 +29,7 @@ export default function Footer() {
           <ul className="mt-5 space-y-3 text-white/80">
             {services.map((s) => (
               <li key={s.slug}>
-                <Link href={`/services/${s.slug}`} className="hover:text-pink">
+                <Link href={`/services/${s.slug}`} className="hover:text-red">
                   {s.name}
                 </Link>
               </li>
@@ -50,7 +50,7 @@ export default function Footer() {
               ["Contact", "/contact"],
             ].map(([label, href]) => (
               <li key={href}>
-                <Link href={href} className="hover:text-pink">
+                <Link href={href} className="hover:text-red">
                   {label}
                 </Link>
               </li>
@@ -62,7 +62,7 @@ export default function Footer() {
 
         <div>
           <h3 className="font-display text-lg font-extrabold uppercase tracking-wide">Office Location</h3>
-          <a href={site.mapsUrl} target="_blank" rel="noreferrer" className="mt-5 block text-white/80 hover:text-pink">
+          <a href={site.mapsUrl} target="_blank" rel="noreferrer" className="mt-5 block text-white/80 hover:text-red">
             {site.address.street}
             <br />
             {site.address.city}, {site.address.state} {site.address.zip}
@@ -85,8 +85,8 @@ export default function Footer() {
             &copy; {year} {site.name} | Proudly serving {site.region}
           </p>
           <p className="flex flex-wrap justify-center gap-x-4 gap-y-1">
-            <Link href="/faqs" className="hover:text-pink">FAQs</Link>
-            <Link href="/contact" className="hover:text-pink">Contact</Link>
+            <Link href="/faqs" className="hover:text-red">FAQs</Link>
+            <Link href="/contact" className="hover:text-red">Contact</Link>
             <span>Terms &amp; Conditions</span>
             <span>Privacy Policy</span>
           </p>
@@ -99,10 +99,10 @@ export default function Footer() {
 export function MobileCallBar() {
   return (
     <div className="fixed inset-x-0 bottom-0 z-40 grid grid-cols-2 lg:hidden">
-      <a href={site.phoneHref} className="flex items-center justify-center gap-2 bg-plum py-4 font-display font-bold uppercase text-white">
+      <a href={site.phoneHref} className="flex items-center justify-center gap-2 bg-maroon py-4 font-display font-bold uppercase text-white">
         <Phone className="h-5 w-5" /> Call Now
       </a>
-      <Link href="/contact#quote" className="flex items-center justify-center bg-pink py-4 font-display font-bold uppercase text-white">
+      <Link href="/contact#quote" className="flex items-center justify-center bg-red py-4 font-display font-bold uppercase text-white">
         Free Quote
       </Link>
     </div>
